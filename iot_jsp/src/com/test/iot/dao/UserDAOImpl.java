@@ -1,19 +1,47 @@
 package com.test.iot.dao;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class UserDAOImpl implements UserDAO{
+import com.test.iot.common.DBCon;
+
+public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public ArrayList<HashMap<String, Object>> selectUserList() {
-		// TODO Auto-generated method stub
-		return null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		ArrayList<HashMap<String, Object>> userList = new ArrayList<HashMap<String, Object>>();
+		String sql = "select * from user_info";
+
+		try {
+			ps = DBCon.getCon().prepareStatement(sql);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+
+				HashMap<String, Object> hm = new HashMap<String, Object>();
+				hm.put("userno", rs.getString("userno"));
+				hm.put("username", rs.getString("username"));
+				hm.put("userage", rs.getString("userage"));
+				hm.put("userid", rs.getString("userid"));
+				hm.put("userpwd", rs.getString("userpwd"));
+
+				userList.add(hm);
+			}
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+		return userList;
 	}
 
 	@Override
 	public HashMap<String, Object> selectUser() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
