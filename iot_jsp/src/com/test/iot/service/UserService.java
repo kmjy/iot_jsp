@@ -7,4 +7,7 @@ public interface UserService {
 
 		public ArrayList<HashMap<String,Object>> getUserList();
 		public HashMap<String,Object> getUser();
+		
+		
+		int insertUser(HashMap<String, String> user);
 }

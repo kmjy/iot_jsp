@@ -6,4 +6,10 @@ import java.util.HashMap;
 public interface UserDAO {
 	public ArrayList<HashMap<String,Object>> selectUserList();
 	public HashMap<String,Object> selectUser();
+	
+	
+	
+	int insertUser(Connection con, HashMap<String, String> user);
 }
+
+
