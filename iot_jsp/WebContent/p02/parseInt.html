@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script>
+
+
+var calObj = function(ibs){
+	var getValue = funciton(id){
+		return document.getElementById(id).value;
+	}
+	
+	var setValue = function(){
+		num1 = parseInt(getValue(ids["num1"]));
+		num2 = parseInt(getValue(ids["num2"]));
+		op = getValue(ids["op"]);
+		}
+		
+		var add = funciton(){
+			return num1 +num2;
+		}
+		var minus = funciton(){
+			return num1 -num2;
+		}
+		var multiple = funciton(){
+			return num1 *num2;
+		}
+		var divide  = funciton(){
+			return num1 / num2;
+		}
+		
+		this.cal = fuction(){
+			if()
+		}
+		
+	}
+}
+
+	function add() {
+		var num10bj = document.getElementById("num1");
+		var num20bj = document.getElementById("num2");
+		var num1 = parseInt(num10bj.value);
+		var num2 = parseInt(num20bj.value);
+		
+		var opall = documnet.getElemnetById("op");
+		
+		if (isNaN(num1)) {
+			alert("첫번째 숫자 입렵하라고 이자식아!");
+			num10bj.focus();
+			return;
+		}
+
+		if (isNaN(num2)) {
+			alert("첫번째 숫자 입렵하라고 이자식아!");
+			num20bj.focus();
+			return;
+		}
+		if(apall.value == "+"){
+			document.getElementById("result").value = num1 + num2;
+			return;
+		}else if(apall.value == "-"){
+			document.getElementById("result").value = num1 + num2;
+			return;
+		}else if(apall.value == "*"){
+			document.getElementById("result").value = num1 + num2;
+			return;
+		}else(apall.value == "/"){
+			document.getElementById("result").value = num1 + num2;
+			return;
+		}
+
+		
+		document.getElementById("result").value = num1 + num2;
+	}
+</script>
+
+<body>
+	<input type="text" id="num1">
+	<select id="op">
+		<option value="+">더하기</option>
+		<option value="-">빼기</option>
+		<option value="*">곱하기</option>
+		<option value="/">나누기</option>
+	</select> 
+	<input type="text" id="num2"> =
+	<input type="text" id="result">
+	<br>
+	<input type="button" value="더하기" onclick="add()">
+</body>
+</html>

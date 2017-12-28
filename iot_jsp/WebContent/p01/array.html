@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+(1)  array
+
+
+<script>
+
+ var arr= new Array();
+ alert(arr.length);
+
+ arr[arr.length] ="1";
+ arr[arr.length]=true;
+ arr[arr.length]=200;
+ arr.push(123123.123);
+arr.splice(1,1);
+ for(var i=0; i<arr.length; i++){
+	 document.write("arr["+ i + "]=" + arr[i]+":" +(typeof arr[i]) +"<br>");
+ }
+ 
+ arr ={};
+ arr["test"]=123;
+ alert(arr.test);
+ 
+ arr=[{"test":123},{"test":222}]; 
+ alert(arr[0].test); 
+ 
+ 
+ </script>
+
+(2)typof :  를 쓰면 타입을 알아낼수있다.<br>
+(3)push : array에 값을 넣으려면 (자바는  add) 스크립은 push.<br>
+(4)splice :(안덱스값 , 그인덱스 값에서  몇개를 지울지)<br>
+(5)arr  구조체 <br>
+ arr ={ <br>
+		 0:"난 0이라고해 ", <br>
+		 1:"난 1이라고해 ", <br>
+		 alert : function(str){ <br>
+			 window.alert("안녕 난 함수야 ");	  <br>
+		 }, <br>
+		 test : new Array() <br>
+ }; <br>
+
+ 제이슨구조이다 <br>
+ <br>
+  arr=[{"test":123},{"test":222}];  <br>
+   alert(arr[0].test);  <br>
+   이게된데 ;;;2차원배열 이야....  <br>
+   
+ 
+ 
+
+</body>
+</html>

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.test.iot.service.UserService;
-import com.test.iot.service.impl.UserServiceImpl;
+import com.test.iot.service.UserServiceImpl;
 
 public class UserServlet extends HttpServlet {
 	UserService us = new UserServiceImpl();

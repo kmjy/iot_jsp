@@ -8,9 +8,9 @@
 		<welcome-file>/WEB-INF/view/index.jsp</welcome-file>
 	</welcome-file-list>
 
-//웹에서요청한 url 과 맵핑되는 것이 있는지 여기 web.xml (배포서술자  DD deployment  describer)를 통해 찾아본다.
 
-	<servlet>       //응 이런 서블랫이 있다고 설정해줘야하
+
+	<servlet>     
 		<servlet-name>UserServlet</servlet-name>
 		<servlet-class>com.test.iot.servlet.UserServlet</servlet-class>    
 	</servlet>
@@ -18,7 +18,7 @@
 	<servlet-mapping>
 	
 		<servlet-name>UserServlet</servlet-name>     
-		<url-pattern>/user/*</url-pattern>      //요청하는url 주소에 url-pattern 과 매칭하는게 있는지 찾아본다 .  이걸처리하는 UserServlet 이라는 서블랫이이 확인할수있
+		<url-pattern>/user/*</url-pattern>     
 		
 	</servlet-mapping>
 	

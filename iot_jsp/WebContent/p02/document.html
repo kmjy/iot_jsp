@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script>
+function readText();
+	var ipObj = document.getElementById("ip1");
+	document.getElementById("result_div").innerHTML  += ipObj.value;
+</script>
+
+<body>
+ <div id="result_div" style="background-color:red">1</div>
+
+
+
+ <input id ="ip1" value ="test" >
+ <input type="button" value= "readText" onclick="readText()">
+</body>
+</html>

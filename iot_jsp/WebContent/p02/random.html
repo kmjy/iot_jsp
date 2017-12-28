@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+
+	<script>
+
+	var rNum = Math.floor(Math.random() * 3) + 1;
+
+		function check(id) {
+			if (document.getElementById(id).value == rNum) {
+				alert("당첨!!!!!!!!");
+			}
+		}
+		
+		
+	</script>
+
+
+</body>
+
+<input type="button" id="1" value="1" onclick="check(id)">
+
+<input type="button" id="2" value="2" onclick="check(id)">
+
+<input type="button" id="3" value="3" onclick="check(id)">
+
+
+</html>
