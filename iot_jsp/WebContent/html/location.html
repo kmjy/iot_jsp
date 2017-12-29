@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script>
+
+
+
+function movePage(){
+	location.href= "target.html";
+}
+
+
+function setStyle(obj,init){
+	
+	if(init){
+		obj.style.cssText="";
+	}else{
+	obj.style.cssText  = "cursor:pointer";
+	obj.style.cssText  += "color:blue";
+	obj.style.cssText  += "text-decoration:underline";
+	obj.style.cssText  += "font-size:100px";
+	
+}
+}
+
+function changeText(obj){
+	
+}
+function setEvent(){
+	
+	var objs = document.getElementsByTagName("div");
+	
+	for(var obj of objs){
+		if(obj.getAttribute("data-url")){
+		obj.onclick = movePage;
+		obj.onmouseover=setStyle.bind(null,obj,false);
+		obj.onmouseout= setStyle.bind(null,obj,true);
+	}
+}
+}
+</script>
+
+<body onload="setEvent()">
+
+	<div>난 data-url 없는데</div>
+	<div data-url="http://localhost/html/traget.html">url을 이용한 이동</div>
+	<div data-url="/html/target.html">절대경로를 이용한 이동</div>
+	<div data-url="./target.html">상대경로를 이용한 이동 1</div>
+	<div data-url="target.html">상대경로를 이용한 이동2</div>
+	<div data-url=" ../target.html">상대경로를 이용한 상위폴더 이동</div>
+
+
+</body>
+</html>

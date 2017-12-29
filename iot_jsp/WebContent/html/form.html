@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script src="/js/test.js"></script>
+<script src="/js/jquery-3.2.1.js"></script>
+
+<script>
+
+function checkValue(fObj){
+	var objs = $("input[id]");
+	for(var obj of objs){
+		var len = parseInt(obj.getAttribute("data-val"));
+		var value = obj.value.trim();
+		if(value.length<len){
+			alert(obj.getAttribute("data-msg"));
+			obj.value="";
+			obj.focus();
+			return false;
+		}
+		
+	}
+	return true;
+}
+</script>
+<body>
+	
+	
+	
+	<form action="./location.html" onsubmit="return checkValue(this)">
+	<h2 id = "hText">로그인</h2>
+		ID : <input type="text" name="userId" id="userId" data-val="5" data-msg="input id"><br>
+		Password : <input type="password" name="userPwd" id="userPwd" data-val="5" data-msg="input password"><br>
+		<input type="submit" id ="loginBtn" value="login" >
+
+	</form>
+
+</body>
+</html>
